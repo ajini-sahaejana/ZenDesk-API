@@ -6,6 +6,12 @@ const port = process.env.PORT || 3000;
 
 // For accepting post form data
 const bodyParser = require("express").json;
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(bodyParser());
 
 app.listen(port, () => {
